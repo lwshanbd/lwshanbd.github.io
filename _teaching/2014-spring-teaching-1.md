@@ -2,9 +2,9 @@
 title: "Teaching Assistant"
 collection: teaching
 type: "Data Structure and Algorithm course"
-permalink: /teaching/2014-spring-teaching-1
+#permalink: /teaching/2014-spring-teaching-1
 venue: "Shandong University, School of Computer Science and Technology"
-date: 2019
+date: 2019-09-01
 location: "Qingdao, China"
 ---
 
