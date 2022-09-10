@@ -1,4 +1,5 @@
     {% if site.footer_fixed %}
+    
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
@@ -9,6 +10,7 @@
         Last updated: {{ "now" | date: '%B %d, %Y' }}.
         {%- endif %}
       </div>
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=u0KN-4dWPC-RN61t9KlaZZPvT2qS81uj8QfkZhT0xnA&cl=ffffff&w=a"></script>
     </footer>
     {%- else -%}
     <footer class="sticky-bottom mt-5">
