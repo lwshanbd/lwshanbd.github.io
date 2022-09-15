@@ -10,6 +10,15 @@
         Last updated: {{ "now" | date: '%B %d, %Y' }}.
         {%- endif %}
       </div>
+              <!-- Google tag (gtag.js) -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3B5DEZC4B"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+      
+                gtag('config', 'G-G3B5DEZC4B');
+              </script>
       <a href='https://clustrmaps.com/site/1beyz'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=u0KN-4dWPC-RN61t9KlaZZPvT2qS81uj8QfkZhT0xnA' style="display:none;"/></a>
     </footer>
     {%- else -%}
