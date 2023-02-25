@@ -1,8 +1,6 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
 @inproceedings{shan2020lcfi,
   abbr={LLVM},
   title={LCFI: A Fault Injection Tool for Studying Lossy Compression Error Propagation in HPC Programs},
@@ -52,11 +50,11 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3582514.3582519},
 doi = {10.1145/3582514.3582519},
-abstract = {MPI+X is the most popular hybrid programming model for distributed computation on modern heterogeneous HPC systems. Nonetheless, for simplicity, HPC developers ideally would like to implement multi-node distributed parallel computing through a single coherent programming model. As de facto standard for parallel programming, OpenMP has been one of the most influential programming models in parallel computing. Recent work has proven that the OpenMP target offloading model could be used to program distributed accelerator-based HPC systems with marginal changes to the application. However, the UCX-based version of remote OpenMP offloading still has many limitations in terms of performance overhead and ease of use of the plugin.In this work, we have implemented a new MPI-based remote OpenMP offloading plugin. By comparing it with the UCX-based version, the new MPI-based plugin has been significantly improved in terms of performance, scalability, and ease of use. Evaluation of our work is conducted using one proxy-app, XSBench and an industrial-level seismic modeling code, Minimod. Results show that, compared to the optimized UCX-based version, our optimizations can reduce offloading latency by up to 70%, and raise application parallel efficiency by 68% when running with 16 GPUs on data-bound applications. In particular, the introduction of the concept of locality-aware offloading gives developers of HPC programs greater possibilities to take full advantage of modern hierarchical heterogeneous computing devices.},
 booktitle = {Proceedings of the 14th International Workshop on Programming Models and Applications for Multicores and Manycores},
-pages = {50--59},
+pages = "50--59",
 numpages = {10},
 keywords = {OpenMP, distributed computing, GPGPU},
 location = {Montreal, QC, Canada},
 series = {PMAM'23}
+pdf={pmam23.pdf},
 }
