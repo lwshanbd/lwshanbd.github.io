@@ -6,7 +6,7 @@ subtitle: PhD Student @ <a href='https://www.cs.stonybrook.edu'>Stony Brook Univ
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic0.jpg
   address: >
     <p>IACS Building</p>
     <p>Stony Brook</p>
