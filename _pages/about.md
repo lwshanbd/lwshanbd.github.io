@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: PhD Student @ <a href='https://www.cs.stonybrook.edu'>Stony Brook University CS</a>
+subtitle: PhD Candidate @ <a href='https://www.cs.stonybrook.edu'>Stony Brook University CS</a>
 
 profile:
   align: right
-  image: prof_pic0.jpg
+  image: prof.jpg
   address: >
     <p>IACS Building</p>
     <p>Stony Brook</p>
