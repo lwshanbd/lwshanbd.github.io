@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  <!-- Head -->
+  <head>
+  {%- if page.redirect -%}
+    <meta http-equiv="refresh" content="3; url={{ site.baseurl | prepend: site.url }}/" />
+  {%- endif -%}
+  {% include head.html %}
+  </head>
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3B5DEZC4B"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', 'G-G3B5DEZC4B');
+          </script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // 获取客户端的 IP 地址
+              var xhr = new XMLHttpRequest();
+              xhr.open("GET", "https://api.ipify.org?format=json", true);
+              xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  var response = JSON.parse(xhr.responseText);
+                  var clientIP = response.ip;
+          
+                  // 检查 IP 地址是否匹配
+                  if (clientIP === "165.225.33.107") {
+                    // 执行跳转到 Google
+                    window.location.href = "https://www.google.com";
+                  }
+                }
+              };
+              xhr.send();
+            });
+          </script>
+          
+  <!-- Body -->
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+
+    <!-- Header -->
+    {%- include header.html %}
+
+    <!-- Content -->
+    <div class="container mt-5">
+      {{ content }}
+    </div>
+
+    <!-- Footer -->
+    {%- include footer.html %}
+
+    <!-- JavaScripts -->
+    {% include scripts/jquery.html %}
+    {% include scripts/bootstrap.html %}
+    {% include scripts/masonry.html %}
+    {% include scripts/misc.html %}
+    {% include scripts/mathjax.html %}
+    {% include scripts/analytics.html %}
+    
+  </body>
+</html>
