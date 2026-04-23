@@ -12,7 +12,7 @@ profile:
     <p>Stony Brook</p>
     <p>New York, 11790</p>
 
-news: true  # includes a list of news items
+news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
@@ -24,4 +24,3 @@ My research focuses on **networking and system architecture for large-scale AI a
 I have interned at [Amazon Web Services](https://aws.amazon.com/) (Summer 2025), [Lawrence Livermore National Laboratory](https://www.llnl.gov/) (Summer 2024), and [TotalEnergies](https://www.totalenergies.com/) (Summer 2023). I currently serve as the Stony Brook representative to the OpenMP Architecture Review Board and as PI on an Argonne Leadership Computing Facility Director's Discretionary allocation.
 
 You can download my [CV](/assets/pdf/CV_Baodi_Shan.pdf) or reach me by [email](mailto:baodi.shan@stonybrook.edu).
-

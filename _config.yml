@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Baodi
-middle_name: 
+middle_name:
 last_name: Shan
 email: baodi.shan@stonybrook.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -13,13 +13,12 @@ footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
-
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en,zh # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🌝  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🌝 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://lwshanbd.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/
+baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -79,7 +78,6 @@ linkedin_username: baodi-shan-916808179 # your LinkedIn user name
 scholar_userid: dB0p9MgAAAAJ # your Google Scholar ID
 orcid_id: 0000-0002-1022-3801 # your ORCID ID
 
-
 contact_note: >
   Insitutate For Advanced Computational Science Building, Stony Brook, NY 11790, USA
 
@@ -100,7 +98,6 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-
 
 blog_name: Baodi's Blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
