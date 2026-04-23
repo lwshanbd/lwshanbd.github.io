@@ -256,15 +256,7 @@ article a:hover {
 }
 .publications .abbr,
 .publications abbr {
-  display: inline-block;
-  font-family: "Inter Tight", system-ui, sans-serif !important;
-  font-size: 10px !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase;
-  color: var(--ed-accent) !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  margin-right: 6px;
+  display: none !important;
 }
 
 /* Year divider (al-folio emits an h2.year) */
@@ -303,22 +295,40 @@ article a:hover {
   margin-top: 0.75rem;
 }
 
-/* Footer */
-footer {
+/* Footer: al-folio sets text color via --global-footer-text-color on the
+   inner .container, which wins over a plain `footer { color }` rule.
+   Rewire the CSS variables and target .container directly. */
+:root {
+  --global-footer-bg-color: var(--ed-bg);
+  --global-footer-text-color: var(--ed-fg-muted);
+  --global-footer-link-color: var(--ed-fg);
+}
+html[data-theme="dark"] {
+  --global-footer-bg-color: var(--ed-bg);
+  --global-footer-text-color: var(--ed-fg-muted);
+  --global-footer-link-color: var(--ed-fg);
+}
+footer,
+footer.fixed-bottom,
+footer.sticky-bottom {
   background: var(--ed-bg) !important;
-  color: var(--ed-fg-muted) !important;
   border-top: 1px solid var(--ed-rule);
-  padding: 1.5rem 0 !important;
+  padding: 1.25rem 0 !important;
   font-family: "Inter Tight", system-ui, sans-serif !important;
   font-size: 11px !important;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  box-shadow: none !important;
 }
-footer a {
+footer .container,
+footer.fixed-bottom .container,
+footer.sticky-bottom .container {
+  max-width: 680px;
+  color: var(--ed-fg-muted) !important;
+}
+footer a,
+footer .container a {
   color: var(--ed-fg) !important;
   border-bottom: 1px solid var(--ed-rule);
-}
-footer .container {
-  max-width: 680px;
 }
 
 /* Publications page title (for /publications/) */
