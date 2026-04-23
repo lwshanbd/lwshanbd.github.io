@@ -1,0 +1,343 @@
+---
+---
+
+/* ============================================================
+   Editorial override for al-folio
+   Drop this file at: assets/css/editorial.scss
+   ---
+   Then in _includes/head.liquid, after main.css, add:
+     <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url | bust_css_cache }}">
+   (Jekyll will compile the .scss.)
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter+Tight:wght@400;500;600&display=swap");
+
+:root {
+  --ed-bg: #f5efe4;
+  --ed-bg-alt: #eae2d3;
+  --ed-fg: #1f1d18;
+  --ed-fg-muted: #79726a;
+  --ed-rule: #c9bfaa;
+  --ed-accent: #8f2a2a;
+
+  --global-bg-color: var(--ed-bg);
+  --global-text-color: var(--ed-fg);
+  --global-text-color-light: var(--ed-fg-muted);
+  --global-theme-color: var(--ed-accent);
+  --global-hover-color: var(--ed-accent);
+  --global-divider-color: var(--ed-rule);
+  --global-card-bg-color: var(--ed-bg-alt);
+}
+
+html[data-theme="dark"] {
+  --ed-bg: #18140f;
+  --ed-bg-alt: #221d16;
+  --ed-fg: #f0e9dc;
+  --ed-fg-muted: #968c7c;
+  --ed-rule: #3a3228;
+  --ed-accent: #d98a8a;
+
+  --global-bg-color: var(--ed-bg);
+  --global-text-color: var(--ed-fg);
+  --global-text-color-light: var(--ed-fg-muted);
+  --global-theme-color: var(--ed-accent);
+  --global-hover-color: var(--ed-accent);
+  --global-divider-color: var(--ed-rule);
+  --global-card-bg-color: var(--ed-bg-alt);
+}
+
+/* Base typography — serif body, sans UI chrome */
+body {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif !important;
+  background: var(--ed-bg) !important;
+  color: var(--ed-fg) !important;
+  font-size: 17px;
+  line-height: 1.65;
+  font-feature-settings: "onum", "ss01";
+}
+
+/* Container width: al-folio uses Bootstrap; tighten the about page */
+.post {
+  max-width: 680px !important;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Navbar: strip the MDB heaviness, make it a thin editorial masthead */
+nav.navbar {
+  background: var(--ed-bg) !important;
+  border-bottom: 1px solid var(--ed-rule);
+  box-shadow: none !important;
+  padding: 0.5rem 1.25rem !important;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 11px !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+nav.navbar .navbar-brand {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 12px !important;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: var(--ed-fg) !important;
+}
+nav.navbar .nav-item .nav-link {
+  color: var(--ed-fg-muted) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em;
+  padding: 0.25rem 0.75rem !important;
+}
+nav.navbar .nav-item .nav-link:hover,
+nav.navbar .nav-item .nav-link.active {
+  color: var(--ed-accent) !important;
+  background: transparent !important;
+}
+nav.navbar .contact-icons a {
+  color: var(--ed-fg-muted) !important;
+}
+
+/* Kill the big profile image, the author wants it gone. But keep it
+   available if someone explicitly flips page.profile back on. */
+.profile {
+  float: none !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+.profile img {
+  display: none !important;
+}
+.profile .address {
+  display: none !important;
+}
+.profile .more-info {
+  display: none !important;
+}
+
+/* Header: name as the big editorial headline */
+.post-header {
+  margin: 4.5rem 0 2rem 0;
+}
+.post-title {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 64px !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.025em;
+  margin: 0 !important;
+  color: var(--ed-fg) !important;
+}
+.post-title .font-weight-bold {
+  font-weight: 500 !important;
+}
+.post-description,
+.post-header .desc,
+.post-header p {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.02em;
+  color: var(--ed-fg-muted) !important;
+  font-style: normal !important;
+  margin-top: 18px !important;
+}
+
+/* Article body */
+article p {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  color: var(--ed-fg) !important;
+  margin-bottom: 1rem;
+}
+article h2 {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--ed-fg-muted) !important;
+  margin-top: 4rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ed-rule);
+}
+article h2 a {
+  color: inherit !important;
+}
+
+article a {
+  color: var(--ed-fg) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--ed-rule);
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+article a:hover {
+  color: var(--ed-accent) !important;
+  border-color: var(--ed-accent);
+}
+
+/* News table */
+.news table {
+  width: 100%;
+}
+.news th,
+.news td {
+  border: none !important;
+  padding: 10px 0 !important;
+  vertical-align: top !important;
+}
+.news th {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 0.06em;
+  font-weight: 400 !important;
+  color: var(--ed-fg-muted) !important;
+  font-variant-numeric: tabular-nums;
+  padding-right: 20px !important;
+  width: 100px !important;
+}
+.news td {
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  border-bottom: 1px dotted var(--ed-rule) !important;
+}
+
+/* Publications (jekyll-scholar output) */
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.publications ol.bibliography li {
+  padding: 1rem 0 !important;
+  border-bottom: 1px dotted var(--ed-rule);
+  display: block;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.publications ol.bibliography li .row,
+.publications ol.bibliography li .col {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.publications ol.bibliography li .preview,
+.publications ol.bibliography li img {
+  display: none !important;
+}
+
+.publications .title {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  font-size: 17px !important;
+  line-height: 1.32 !important;
+  color: var(--ed-fg) !important;
+  margin-bottom: 4px !important;
+}
+.publications .author,
+.publications em {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 13px !important;
+  color: var(--ed-fg-muted) !important;
+  line-height: 1.55;
+  font-style: normal !important;
+}
+.publications .author a {
+  border: none !important;
+}
+.publications .periodical {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 12px !important;
+  color: var(--ed-fg-muted) !important;
+}
+.publications .abbr,
+.publications abbr {
+  display: inline-block;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  color: var(--ed-accent) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  margin-right: 6px;
+}
+
+/* Year divider (al-folio emits an h2.year) */
+.publications h2.year,
+.publications h2.bibliography {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.2em !important;
+  color: var(--ed-accent) !important;
+  font-weight: 600 !important;
+  border: none !important;
+  margin: 1.75rem 0 0.25rem 0 !important;
+  padding: 0 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Social icons row */
+.social {
+  margin-top: 3rem !important;
+  text-align: left !important;
+}
+.social .contact-icons a {
+  color: var(--ed-fg-muted) !important;
+  font-size: 18px !important;
+  margin-right: 14px;
+  border: none !important;
+  transition: color 0.15s;
+}
+.social .contact-icons a:hover {
+  color: var(--ed-accent) !important;
+}
+.social .contact-note {
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 12px !important;
+  color: var(--ed-fg-muted) !important;
+  margin-top: 0.75rem;
+}
+
+/* Footer */
+footer {
+  background: var(--ed-bg) !important;
+  color: var(--ed-fg-muted) !important;
+  border-top: 1px solid var(--ed-rule);
+  padding: 1.5rem 0 !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1em;
+}
+footer a {
+  color: var(--ed-fg) !important;
+  border-bottom: 1px solid var(--ed-rule);
+}
+footer .container {
+  max-width: 680px;
+}
+
+/* Publications page title (for /publications/) */
+.publications-header h1,
+h1.post-title {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Remove drop shadows / bootstrap cards generally on hero page */
+.z-depth-1,
+.z-depth-2 {
+  box-shadow: none !important;
+}
+
+/* Back-to-top button: make it quieter */
+#back-to-top {
+  background: var(--ed-bg-alt) !important;
+  color: var(--ed-fg) !important;
+  border: 1px solid var(--ed-rule) !important;
+}
